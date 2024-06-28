@@ -360,7 +360,7 @@ CreateServer ⇐ {𝕊:
 
     SearchForMessage ⇐ Poll∘connection
 
-    _WithMessage_ ⇐ {@⊸≡◶⟨({𝕩.Close@}⊢𝔽)Listen∘@⋄𝔾⟩SearchForMessage}
+    _WithMessage_ ⇐ {@⊸≡◶⟨𝔽Listen∘@⋄𝔾⟩SearchForMessage}
 
     Listen ⇐ {𝕊lengthOfReadMessage:
       # read from client with recv!
