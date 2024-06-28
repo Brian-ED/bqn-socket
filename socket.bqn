@@ -358,6 +358,10 @@ CreateServer ⇐ {𝕊:
     "Only address IPV4 allowed"!2≡n
     connection ← cfd
 
+    SearchForMessage ⇐ Poll∘connection
+
+    _WithMessage_ ⇐ {@⊸≡◶⟨({𝕩.Close@}⊢𝔽)Listen∘@⋄𝔾⟩SearchForMessage}
+
     Listen ⇐ {𝕊lengthOfReadMessage:
       # read from client with recv!
       l ← 1024⍟(@⊸≡)𝕩
@@ -366,7 +370,7 @@ CreateServer ⇐ {𝕊:
     Close ⇐ SocketClose∘connection
     address⇐
   }
-  _WithConnection_ ⇐ {@⊸≡◶⟨({𝕩.Close@}⊢𝔽)∘AcceptConnection∘@⋄𝔾⟩SearchForConnection}
+  _WithConnection_ ⇐ {@⊸≡◶⟨({𝕩.Close@}⊢𝔽)AcceptConnection∘@⋄𝔾⟩SearchForConnection}
 
   Close ⇐ SocketClose∘fd
 }

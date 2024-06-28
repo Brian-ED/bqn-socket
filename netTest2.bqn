@@ -24,8 +24,7 @@ _asClient‿_asServer ← •Import "socket.bqn"
       port ← •ParseFloat connection.Listen@
       {𝕊client:
         client.Send •Show "hi from server"
-        •Delay 0.3 # find proper replacement for this delay
-        •Show connection.Listen@
+        •Show connection._withMessage_ (•Delay∘0.1⊸⊢) •_While_ (@⊸≡)@
       }_asClient´ address‿port
     } server._WithConnection_ (•Delay∘0.1⊸⊢) •_While_ (@⊸≡)@
   } _asServer@

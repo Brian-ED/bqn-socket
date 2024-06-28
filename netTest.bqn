@@ -24,7 +24,7 @@ _blocking_ ← {•Delay∘𝔾⍟(@⊸≡)⊸⊢∘𝔽 •_While_ (@⊸≡)}
         port ← •ParseFloat connection.Listen@
         client ← address CreateClient port
           client.Send "hi from server"
-          •Delay 0.3 # find proper replacement for this delay
+          connection.SearchForMessage _blocking_ 0.1 @
           •Show connection.Listen@
         client.Close
       connection.Close@
