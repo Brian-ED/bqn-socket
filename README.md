@@ -11,4 +11,4 @@ Some macros and defines were manually resolved by including a lot. Mistakes in c
 
 Could be worth resolving all these macros automatically with [c-header-to-bqn-ffi](https://github.com/Brian-ED/c-header-to-bqn-ffi/).
 
-I'll be using this lib for making online games with rayed-bqn.
+I'll be using this lib for making online games with [rayed-bqn](https://github.com/Brian-ED/rayed-bqn).
