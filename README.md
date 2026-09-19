@@ -1,7 +1,7 @@
 This is a socket library for making it easier to use sockets in BQN.
 It is currently unstable with little testing done
 
-currently only linux, more operating systems planned.
+currently only linux, more operating systems would be nice.
 
 # Tested on
 linux x86-64 Mint-OS.
